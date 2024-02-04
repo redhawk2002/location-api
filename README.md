@@ -81,5 +81,16 @@ The implementation in this project is based on the principles outlined in the fo
 - **Mongoose:** ^8.1.1 (MongoDB ODM)
 - **Nodemon:** ^3.0.3 (development server automation)
 
+## Docker Image
+
+The Docker image for this project has been pushed to Docker Hub under the username "sandeepankalita18".
+
+- Docker Hub Repository: [sandeepankalita18/mapsense](https://hub.docker.com/r/sandeepankalita18/mapsense)
+
+You can pull the image using the following command:
+
+```bash
+docker pull sandeepankalita18/mapsense
+```
 ## Demonstration
 
