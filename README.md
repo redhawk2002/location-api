@@ -15,8 +15,14 @@ This Node.js backend REST API provides location-based services, allowing clients
 ### Installation
 
 1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the application: `npm run dev`
+2. Create a `config.env` file in the root directory and insert the following:
+   ```env   
+   PORT=<your_desired_port>
+   MONGO_URI=<your_mongo_db_uri>
+   JWT_SECRET=<your_jwt_secret>
+   
+3. Install dependencies: `npm install`
+4. Start the application: `npm run dev`
 
 ## Endpoints
 
