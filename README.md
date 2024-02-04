@@ -1,5 +1,9 @@
 # Location-based Service API
 
+## Diagram
+![image](https://github.com/redhawk2002/location-api/assets/77795912/7f47a5aa-957d-4a03-baea-86a68d9788e5)
+
+
 ## Overview
 
 This Node.js backend REST API provides location-based services, allowing clients to submit GPS coordinates, storing them in a database, and performing logical operations on the collected data.
