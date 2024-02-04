@@ -72,7 +72,7 @@ Remember to replace `<repository_url>` and `<your_port>` with the actual URL of 
 The Haversine Formula is utilized in this project to measure distances between geographical coordinates. This formula calculates the distance between two points on the surface of a sphere, and it is specifically employed to find the distance between two locations on Earth.
 
 ### Reference Article
-The implementation in this project is based on the principles outlined in the following article:
+The implementation in this project is based on the principles outlined in the following GFG article:
 - [Haversine Formula to Find Distance Between Two Points on a Sphere](https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/)
 
 ## Libraries/Frameworks
