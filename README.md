@@ -15,7 +15,7 @@ This Node.js backend REST API provides location-based services, allowing clients
 ### Installation
 
 1. Clone the repository
-2. Create a `config.env` file in the root directory and insert the following:
+2. Create a `config.env` file in the config directory and insert the following:
    ```env   
    PORT=<your_desired_port>
    MONGO_URI=<your_mongo_db_uri>
@@ -24,43 +24,30 @@ This Node.js backend REST API provides location-based services, allowing clients
 3. Install dependencies: `npm install`
 4. Start the application: `npm run dev`
 
-## Endpoints
+## API Endpoints
 
-**Root Endpoint ("/") - GET:**
+### Root Endpoint ("/") - GET:
+Access the welcome message by visiting: [http://localhost:<your_port>/](http://localhost:<your_port>/)
 
-- Returns a welcome message indicating that the user has reached the Location-based Service API.
+### Register Endpoint ("/api/register") - POST:
+Register a new user by sending a POST request to: [http://localhost:<your_port>/api/register](http://localhost:<your_port>/api/register)
 
-**Register Endpoint ("/api/register") - POST:**
+### Login Endpoint ("/api/login") - POST:
+Log in by sending a POST request to: [http://localhost:<your_port>/api/login](http://localhost:<your_port>/api/login)
 
-- Allows users to register by providing their email and password.
+### Logout Endpoint ("/api/logout") - GET:
+Log out by accessing: [http://localhost:<your_port>/api/logout](http://localhost:<your_port>/api/logout)
 
-**Login Endpoint ("/api/login") - POST:**
+### Location Endpoint ("/api/location") - POST:
+Submit location coordinates by sending a POST request to: [http://localhost:<your_port>/api/location](http://localhost:<your_port>/api/location)
 
-- Enables users to log in by providing their email and password.
+### Distance Calculation Endpoint ("/api/distance") - POST:
+Calculate the distance between two coordinates by sending a POST request to: [http://localhost:<your_port>/api/distance](http://localhost:<your_port>/api/distance)
 
-**Logout Endpoint ("/api/logout") - GET:**
+### Closest Coordinate Endpoint ("/api/closest") - POST:
+Find the closest stored coordinate by sending a POST request to: [http://localhost:<your_port>/api/closest](http://localhost:<your_port>/api/closest)
 
-- Logs the user out by clearing the token cookie.
-
-**Location Endpoint ("/api/location") - POST (Authenticated):**
-
-- Allows users to submit their location coordinates (latitude and longitude).
-- Validates the coordinates and stores them in the database.
-
-**Distance Calculation Endpoint ("/api/distance") - POST (Authenticated):**
-
-- Enables users to calculate the distance between two sets of coordinates provided in the request body.
-- Validates the coordinates and calculates the haversine distance between them, returning the result in kilometers.
-
-**Closest Coordinate Endpoint ("/api/closest") - POST (Authenticated):**
-
-- Allows users to find the closest stored coordinate to a specified location (latitude and longitude).
-- Retrieves all coordinates from the database and calculates the haversine distance to find the closest one.
-
-**Custom Authentication Middleware:**
-
-- Custom middleware (isAuthenticated) protects specific routes by ensuring user authentication before access.
-- Checks for the presence and validity of a JWT (JSON Web Token) in the request's cookies.
+Remember to replace `<repository_url>` and `<your_port>` with the actual URL of your GitHub repository and the specified port number in your configuration.
 
 ## Design Decisions
 
@@ -77,9 +64,12 @@ This Node.js backend REST API provides location-based services, allowing clients
 
 - **JSON Web Tokens (JWTs):** Employed for secure and stateless authentication.
 
-### Distance Calculation
+### Haversine Formula
+The Haversine Formula is utilized in this project to measure distances between geographical coordinates. This formula calculates the distance between two points on the surface of a sphere, and it is specifically employed to find the distance between two locations on Earth.
 
-- **Haversine Formula:** Used to accurately measure distances between geographical coordinates.
+### Reference Article
+The implementation in this project is based on the principles outlined in the following article:
+- [Haversine Formula to Find Distance Between Two Points on a Sphere](https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/)
 
 ## Libraries/Frameworks
 
