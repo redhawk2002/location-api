@@ -10,7 +10,7 @@ let validator = require("email-validator");
 const { isAuthenticated } = require("./middlewares/auth");
 const haversineDistance = require("./haversineDistance");
 
-// Parse incoming request bodies in a middleware before your handlers
+// Parse incoming request bodies in a middleware before handlers
 app.use(bodyParser.json());
 app.use(cookieParser());
 
